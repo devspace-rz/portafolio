@@ -399,6 +399,13 @@
     background:
       repeating-linear-gradient(135deg, var(--charcoal), var(--charcoal) 10px, var(--ink) 10px, var(--ink) 20px);
     position:relative;
+    overflow:hidden;
+  }
+  .project-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
   }
   .project-thumb span{
     position:absolute;
@@ -419,6 +426,26 @@
     color:var(--accent);
     text-transform:uppercase;
   }
+  .project-body .project-link{
+    margin-top:16px;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink);
+    text-transform:uppercase;
+    text-decoration:none;
+    border-bottom:1px solid var(--accent);
+    padding-bottom:2px;
+    align-self:flex-start;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .project-body .project-link:hover, .project-body .project-link:focus-visible{
+    color:var(--accent);
+    border-color:var(--ink);
+  }
+  .project-body .project-link svg{width:12px;height:12px;flex-shrink:0;}
 
   /* ---------- NOSOTROS ---------- */
   .team{
@@ -747,30 +774,36 @@
     <div class="section-head reveal">
       <div class="tag">Proyectos</div>
       <h2 id="proyectos-h">Trabajo reciente</h2>
-      <p>Estamos preparando el detalle de nuestros proyectos más recientes. Mientras tanto, contáctanos y con gusto te compartimos casos directamente.</p>
+      <p>Algunos de los proyectos con los que hemos puesto a prueba nuestras ideas. Seguimos sumando más casos.</p>
     </div>
     <div class="projects reveal">
       <div class="project-card">
-        <div class="project-thumb"><span>Proyecto 01</span></div>
+        <div class="project-thumb"><img src="proyecto-apuestas-thumb.jpg" alt="Captura de la plataforma de apuestas: resultados y calendario del torneo" loading="lazy"></div>
         <div class="project-body">
-          <h3>Próximamente</h3>
-          <p>Espacio reservado para tu primer proyecto destacado: nombre, breve descripción y enlace.</p>
-          <div class="status">En preparación</div>
+          <h3>Plataforma de Apuestas</h3>
+          <p>Sitio de apuestas virtuales de tipo mundial, con dinero ficticio. Un ejemplo de lo que podemos construir: flujos de usuario, cálculo de momios y experiencia de apuesta en tiempo real.</p>
+          <a class="project-link" href="https://mundial-lyart.vercel.app/" target="_blank" rel="noopener" aria-label="Ver Plataforma de Apuestas (se abre en una pestaña nueva)">
+            Ver proyecto
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-thumb"><span>Proyecto 02</span></div>
+        <div class="project-thumb"><img src="proyecto-horarios-thumb.jpg" alt="Captura del armador de horarios: materias disponibles y calendario semanal" loading="lazy"></div>
         <div class="project-body">
-          <h3>Próximamente</h3>
-          <p>Espacio reservado para tu segundo proyecto destacado.</p>
-          <div class="status">En preparación</div>
+          <h3>Sistema Escolar</h3>
+          <p>Armador de horarios universitario pensado para las necesidades reales de los estudiantes: organiza materias, grupos y tiempos libres de forma simple.</p>
+          <a class="project-link" href="https://horario-upiig.vercel.app/" target="_blank" rel="noopener" aria-label="Ver Sistema Escolar (se abre en una pestaña nueva)">
+            Ver proyecto
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
         </div>
       </div>
       <div class="project-card">
         <div class="project-thumb"><span>Proyecto 03</span></div>
         <div class="project-body">
           <h3>Próximamente</h3>
-          <p>Espacio reservado para tu tercer proyecto destacado.</p>
+          <p>Espacio reservado para tu próximo proyecto destacado.</p>
           <div class="status">En preparación</div>
         </div>
       </div>

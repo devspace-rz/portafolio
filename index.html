@@ -412,13 +412,13 @@
           <a href="mailto:diegoaramirezm5@gmail.com">Correo diegoaramirezm5@gmail.com</a>
         </div>
       </div>
-      <form onsubmit="event.preventDefault();">
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Correo">
-        <textarea placeholder="Mensaje"></textarea>
-        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-        <p style="color:var(--muted); font-size:12.5px;">Al enviar, se abrirá tu app de correo con el mensaje listo para mandar.</p>
-      </form>
+      <form id="contactForm">
+  <input type="text" id="nombreInput" placeholder="Nombre" required>
+  <input type="email" id="correoInput" placeholder="Correo" required>
+  <textarea id="mensajeInput" placeholder="Mensaje" required></textarea>
+  <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+  <p style="color:var(--muted); font-size:12.5px;">Al enviar, se abrirá tu app de correo con el mensaje listo para mandar.</p>
+</form>
     </div>
   </div>
 </section>

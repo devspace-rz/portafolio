@@ -44,13 +44,11 @@
   }
   .eyebrow::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 12px 2px var(--accent-2);}
 
-  /* cursor */
   .cursor-dot, .cursor-glow{ position:fixed; top:0; left:0; pointer-events:none; z-index:9999; border-radius:50%; transform:translate(-50%,-50%);}
   .cursor-dot{ width:6px; height:6px; background:var(--accent-2); }
   .cursor-glow{ width:32px; height:32px; border:1px solid rgba(127,216,255,0.5); transition: width .2s, height .2s, border-color .2s; }
   .cursor-glow.active{ width:52px; height:52px; border-color:var(--accent); background:var(--accent-dim); }
 
-  /* nav */
   header{
     position:fixed; top:0; left:0; right:0; z-index:100;
     padding:22px 24px; display:flex; align-items:center; justify-content:space-between;
@@ -88,7 +86,6 @@
   }
   .mobile-menu.open{ transform:translateY(0); }
 
-  /* hero */
   #hero{ min-height:100vh; display:flex; align-items:center; padding-top:120px; }
   #network{ position:absolute; inset:0; z-index:0; opacity:0.65; }
   .hero-content{ max-width:760px; }
@@ -101,7 +98,6 @@
   .scroll-line{ width:1px; height:36px; background:linear-gradient(var(--accent), transparent); animation: scrolldrop 1.8s infinite;}
   @keyframes scrolldrop{ 0%{opacity:0; transform:translateY(-10px);} 50%{opacity:1;} 100%{opacity:0; transform:translateY(10px);} }
 
-  /* reveal */
   .reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
   .reveal.in{ opacity:1; transform:translateY(0); }
 
@@ -109,7 +105,6 @@
   .section-head h2{ font-size:clamp(28px,4vw,40px); font-weight:600;}
   .section-head p{ color:var(--muted); margin-top:14px; font-size:16px;}
 
-  /* servicios */
   .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
   @media (max-width:860px){ .grid-3{ grid-template-columns:1fr; } }
   .card{
@@ -122,7 +117,6 @@
   .card h3{ font-size:19px; margin-bottom:10px; font-weight:600; }
   .card p{ color:var(--muted); font-size:15px; }
 
-  /* proceso */
   .timeline{ position:relative; padding-left:36px; }
   .timeline-track{ position:absolute; left:9px; top:6px; bottom:6px; width:2px; background:var(--line); }
   .timeline-progress{ position:absolute; left:9px; top:6px; width:2px; background:linear-gradient(var(--accent), var(--accent-2)); height:0%; transition:height .1s linear; box-shadow:0 0 10px var(--accent-2); }
@@ -133,7 +127,6 @@
   .t-item h3{ font-size:19px; margin-bottom:8px; }
   .t-item p{ color:var(--muted); font-size:15px; max-width:520px;}
 
-  /* proyectos */
   .proj-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
   @media (max-width:860px){ .proj-grid{ grid-template-columns:1fr; } }
   .proj-card{
@@ -143,7 +136,7 @@
   .proj-card:hover{ border-color:rgba(62,123,250,0.5); }
   .proj-img{ 
   height: 200px; 
-  background: #0B0D10; /* Cambiamos a un fondo oscuro sólido */
+  background: #0B0D10; 
   position: relative; 
   overflow: hidden; 
   display: flex; 
@@ -154,7 +147,7 @@
 .proj-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ajusta la imagen completa sin recortarla ni deformarla */
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -166,18 +159,15 @@
   .proj-tag{ position:absolute; top:16px; left:16px; font-family:'IBM Plex Mono'; font-size:11px; color:var(--muted); border:1px solid var(--line); padding:4px 10px; border-radius:999px; background:rgba(11,13,16,0.6); z-index:2;}
   .proj-soon{ display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px 28px; border:1px dashed var(--line); border-radius:var(--radius); color:var(--muted); font-family:'IBM Plex Mono'; font-size:13px; gap:8px;}
 
-  /* stats */
   .stats{ display:flex; gap:60px; flex-wrap:wrap; margin-top:20px; }
   .stat-num{ font-family:'Space Grotesk'; font-size:44px; font-weight:600; color:var(--accent-2); }
   .stat-label{ color:var(--muted); font-size:13px; font-family:'IBM Plex Mono'; }
 
-  /* nosotros */
   .team-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
   @media (max-width:860px){ .team-grid{ grid-template-columns:1fr; } }
   .avatar{ width:56px; height:56px; border-radius:12px; background:var(--accent-dim); border:1px solid rgba(62,123,250,0.4); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:600; color:var(--accent-2); margin-bottom:20px; }
   .role{ font-family:'IBM Plex Mono'; font-size:12px; color:var(--muted); margin-bottom:14px; }
 
-  /* faq */
   .faq-item{ border-bottom:1px solid var(--line); padding:22px 0; cursor:pointer; }
   .faq-q{ display:flex; justify-content:space-between; align-items:center; font-size:17px; font-weight:500; }
   .faq-plus{ font-family:'IBM Plex Mono'; color:var(--accent-2); transition:transform .3s ease; }
@@ -185,7 +175,6 @@
   .faq-a{ max-height:0; overflow:hidden; transition:max-height .35s ease; color:var(--muted); font-size:15px; }
   .faq-item.open .faq-a{ max-height:200px; padding-top:14px; }
 
-  /* contacto */
   .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; }
   @media (max-width:860px){ .contact-grid{ grid-template-columns:1fr; } }
   .direct-links{ display:flex; flex-direction:column; gap:14px; margin-top:24px; }
@@ -305,8 +294,8 @@
       <h2>Trabajo reciente</h2>
       <p>Algunos de los proyectos con los que hemos puesto a prueba nuestras ideas. Seguimos sumando más casos.</p>
     </div>
-   <div class="proj-grid">
-      <!-- Proyecto 1: Apuestas -->
+   
+    <div class="proj-grid">
       <div class="proj-card reveal" data-tilt>
         <div class="proj-img">
           <span class="proj-tag">Plataforma de apuestas</span>
@@ -317,8 +306,7 @@
           <p>Sitio de apuestas virtuales de tipo mundial, con dinero ficticio. Un ejemplo de lo que podemos construir: flujos de usuario, cálculo de momios y experiencia en tiempo real.</p>
           <a href="https://mundial-lyart.vercel.app/" class="proj-link" target="_blank">Ver proyecto →</a>
         </div>
-     
-     <!-- Proyecto 2: Sistema Escolar -->
+      </div>
       <div class="proj-card reveal" data-tilt>
         <div class="proj-img">
           <span class="proj-tag">Sistema escolar</span>
@@ -330,8 +318,7 @@
           <a href="https://horario-upiig.vercel.app/" class="proj-link" target="_blank">Ver proyecto →</a>
         </div>
       </div>
-    </div>
-
+    
     
       <div class="proj-card reveal" data-tilt>
         <div class="proj-img">
@@ -343,8 +330,9 @@
           <p>Sitio de aprendizaje creado para gente de todas las edades. Temas de ciencia ingenieria y mas en constante desarrollo.</p>
           <a href="https://mexspace.vercel.app/" class="proj-link" target="_blank">Ver proyecto →</a>
         </div>
-      </div>
-    </div>
+      </div> 
+      
+    </div> 
     
     <div class="proj-soon reveal" style="margin-top:24px;">
       <span>PROYECTO 04 — EN PREPARACIÓN</span>
@@ -446,7 +434,6 @@
 <footer>© 2026 Software Labs. León, Guanajuato, México</footer>
 
 <script>
-// cursor
 const dot = document.querySelector('.cursor-dot');
 const glow = document.querySelector('.cursor-glow');
 window.addEventListener('mousemove', e=>{
@@ -458,19 +445,16 @@ document.querySelectorAll('a, button, .card, .proj-card, .faq-item').forEach(el=
   el.addEventListener('mouseleave', ()=> glow.classList.remove('active'));
 });
 
-// header scroll state
 const header = document.getElementById('header');
 window.addEventListener('scroll', ()=>{
   header.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// mobile menu
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', ()=> mobileMenu.classList.toggle('open'));
 mobileMenu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
 
-// reveal on scroll
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
@@ -479,7 +463,6 @@ const io = new IntersectionObserver((entries)=>{
 }, {threshold:0.15});
 revealEls.forEach(el=> io.observe(el));
 
-// timeline items + progress line
 const tItems = document.querySelectorAll('.t-item');
 const tio = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('in'); });
@@ -497,7 +480,6 @@ window.addEventListener('scroll', ()=>{
   progress.style.height = (visible/total*100)+'%';
 });
 
-// faq accordion
 document.querySelectorAll('.faq-item').forEach(item=>{
   item.addEventListener('click', ()=>{
     const isOpen = item.classList.contains('open');
@@ -506,7 +488,6 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   });
 });
 
-// animated counters
 const counters = document.querySelectorAll('[data-count]');
 const cio = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
@@ -527,7 +508,7 @@ const cio = new IntersectionObserver((entries)=>{
 }, {threshold:0.5});
 counters.forEach(el=> cio.observe(el));
 
-// hero network canvas
+
 const canvas = document.getElementById('network');
 const ctx = canvas.getContext('2d');
 let w,h, nodes=[];

@@ -434,6 +434,19 @@
 <footer>© 2026 Software Labs. León, Guanajuato, México</footer>
 
 <script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const nombre = document.getElementById('nombreInput').value;
+  const correo = document.getElementById('correoInput').value;
+  const mensaje = document.getElementById('mensajeInput').value;
+  
+  const destinatario = 'diegoaramirezm5@gmail.com';
+  const asunto = encodeURIComponent(`Nuevo mensaje de contacto de ${nombre}`);
+  const cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`);
+  
+  window.location.href = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+});
 const dot = document.querySelector('.cursor-dot');
 const glow = document.querySelector('.cursor-glow');
 window.addEventListener('mousemove', e=>{
